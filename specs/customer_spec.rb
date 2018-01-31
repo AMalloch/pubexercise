@@ -51,4 +51,5 @@ class CustomerTest < MiniTest::Test
     assert_equal(1, @customer.drunk_level)
   end
 
+
 end

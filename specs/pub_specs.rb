@@ -81,5 +81,18 @@ class PubTest < MiniTest::Test
     assert_equal(8, @pub.check_drunkenness(@customer))
   end
 
+  def test_food_stock__counter
+    assert_equal(0, @pub.food_stock)
+  end
 
+  def test_add_food_stock
+    @pub.add_food_stock(@food)
+    assert_equal(1, @pub.food_stock)
+  end
+
+  def test_remove_food_stock
+    @pub.add_food_stock(@food)
+    @pub.remove_food_stock(@food)
+    assert_equal(0, @pub.food_stock)
+  end
 end

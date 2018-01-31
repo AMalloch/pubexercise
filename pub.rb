@@ -4,6 +4,7 @@ class Pub
     @name = name
     @till = 0
     @drinks = []
+    @food = []
   end
 
   def drink_stock
@@ -48,6 +49,22 @@ class Pub
       return "Get out ma pub!"
     else
       return customer.drunkenness
+    end
+  end
+
+  def food_stock
+    return @food.length
+  end
+
+  def add_food_stock(food)
+    @food << food
+  end
+
+  def remove_food_stock(food)
+    for item in @food
+      if item == food
+        @food.delete(food)
+      end
     end
   end
 
