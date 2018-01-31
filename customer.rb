@@ -15,4 +15,7 @@ attr_accessor :wallet
     @stomach << drink
   end
 
+  def pay_for_drink(drink)
+    @wallet -= (drink.price)
+  end
 end
