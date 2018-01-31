@@ -15,6 +15,7 @@ attr_accessor :wallet
 
   def get_drink(drink)
     @stomach << drink
+    @drunkenness += (drink.level)
   end
 
   def pay_for_drink(drink)

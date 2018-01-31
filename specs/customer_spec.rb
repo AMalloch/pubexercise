@@ -40,8 +40,13 @@ class CustomerTest < MiniTest::Test
     assert_equal(18, @customer.age)
   end
 
-  def test_drunk_level
+  def test_drunk_level__empty
     assert_equal(0, @customer.drunk_level)
+  end
+
+  def test_drunk_increase
+    @customer.get_drink(@drink)
+    assert_equal(1, @customer.drunk_level)
   end
 
 end
