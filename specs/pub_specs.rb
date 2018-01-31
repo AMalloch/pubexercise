@@ -4,6 +4,7 @@ require('minitest/rg')
 require_relative('../pub')
 require_relative('../customer')
 require_relative('../drink')
+require_relative('../food')
 
 class PubTest < MiniTest::Test
 
@@ -11,6 +12,7 @@ class PubTest < MiniTest::Test
     @pub = Pub.new("Drama Llama Pub")
     @drink = Drink.new("Jack Daniels", 4, 1)
     @customer = Customer.new("Jake", 50, 18, 0)
+    @food = Food.new("Kebab", 5, -2)
 
   end
 
