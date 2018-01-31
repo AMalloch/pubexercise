@@ -2,7 +2,7 @@ class Pub
 attr_reader :name
   def initialize(name)
     @name = name
-    @til = 0
+    @till = 0
     @drinks = []
   end
 
@@ -18,4 +18,7 @@ attr_reader :name
     @drinks.pop
   end
 
+  def till_amount
+    return @till
+  end
 end
