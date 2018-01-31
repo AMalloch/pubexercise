@@ -5,4 +5,8 @@ attr_reader :name
     @til = 0
     @drinks = []
   end
+
+
+
+  
 end
