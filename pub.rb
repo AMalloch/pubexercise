@@ -10,6 +10,9 @@ attr_reader :name
     return @drinks.length
   end
 
+  def add_drink_stock(drink)
+    @drinks << drink
+  end
 
 
 end
