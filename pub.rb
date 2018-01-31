@@ -3,7 +3,11 @@ class Pub
   def initialize(name)
     @name = name
     @till = 0
-    @drinks = []
+    @drinks = [
+      {name: "Jack Daniels", amount: 1},
+      {name: "Gordons Gin", amount: 1},
+      {name: "Glenns Vodka", amount: 1}
+    ]
     @food = []
   end
 

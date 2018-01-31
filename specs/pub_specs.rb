@@ -9,9 +9,13 @@ require_relative('../food')
 class PubTest < MiniTest::Test
 
   def setup
+
+
+
+
     @pub = Pub.new("Drama Llama Pub")
     @drink = Drink.new("Jack Daniels", 4, 1)
-    @customer = Customer.new("Jake", 50, 18, 0)
+    @customer = Customer.new("Jake", 50, 18)
     @food = Food.new("Kebab", 5, -2)
 
   end
@@ -21,18 +25,18 @@ class PubTest < MiniTest::Test
   end
 
   def test_drink_stock__counter
-    assert_equal(0, @pub.drink_stock)
+    assert_equal(3, @pub.drink_stock)
   end
 
   def test_add_drink_stock
     @pub.add_drink_stock(@drink)
-    assert_equal(1, @pub.drink_stock)
+    assert_equal(4, @pub.drink_stock)
   end
 
   def test_remove_drink_stock
     @pub.add_drink_stock(@drink)
     @pub.remove_drink_stock(@drink)
-    assert_equal(0, @pub.drink_stock)
+    assert_equal(3, @pub.drink_stock)
   end
 
   def test_till_amount
@@ -65,7 +69,7 @@ class PubTest < MiniTest::Test
     @pub.check_age(@customer)
     @pub.add_drink_stock(@drink)
     @pub.sell_drink(@customer, @drink)
-    assert_equal(0, @pub.drink_stock)
+    assert_equal(3, @pub.drink_stock)
     assert_equal(4, @pub.till_amount)
   end
 
