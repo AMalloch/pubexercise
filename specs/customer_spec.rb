@@ -25,5 +25,10 @@ class CustomerTest < MiniTest::Test
     assert_equal(0, @customer.drinks_in_belly)
   end
 
+  def test_customer_get_drink
+    @customer.get_drink(@drink)
+    assert_equal(1, @customer.drinks_in_belly)
+  end
+
 
 end

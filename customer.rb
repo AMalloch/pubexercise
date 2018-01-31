@@ -11,4 +11,8 @@ attr_accessor :wallet
     @stomach.length
   end
 
+  def get_drink(drink)
+    @stomach << drink
+  end
+
 end
