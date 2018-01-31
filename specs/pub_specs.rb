@@ -10,9 +10,6 @@ class PubTest < MiniTest::Test
 
   def setup
 
-
-
-
     @pub = Pub.new("Drama Llama Pub")
     @drink = Drink.new("Jack Daniels", 4, 1)
     @customer = Customer.new("Jake", 50, 18)
@@ -99,4 +96,6 @@ class PubTest < MiniTest::Test
     @pub.remove_food_stock(@food)
     assert_equal(0, @pub.food_stock)
   end
+
+
 end

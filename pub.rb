@@ -1,12 +1,13 @@
 class Pub
   attr_reader :name
   def initialize(name)
+
     @name = name
     @till = 0
     @drinks = [
-      {name: "Jack Daniels", amount: 1},
-      {name: "Gordons Gin", amount: 1},
-      {name: "Glenns Vodka", amount: 1}
+      {name: "Jack Daniels", price: 4},
+      {name: "Gordons Gin", price: 3},
+      {name: "Glenns Vodka", price: 2}
     ]
     @food = []
   end
@@ -71,9 +72,5 @@ class Pub
       end
     end
   end
-
-
-
-
 
 end
