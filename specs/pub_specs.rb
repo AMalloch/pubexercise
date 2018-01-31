@@ -9,7 +9,7 @@ class PubTest < MiniTest::Test
 
   def setup
     @pub = Pub.new("Drama Llama Pub")
-    @drink = Drink.new("Jack Daniels", 4)
+    @drink = Drink.new("Jack Daniels", 4, 1)
     @customer = Customer.new("Jake", 50, 18)
 
   end

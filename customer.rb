@@ -6,6 +6,7 @@ attr_accessor :wallet
     @wallet = wallet
     @stomach = []
     @age = age
+    @drunkenness = 0
   end
 
   def drinks_in_belly
