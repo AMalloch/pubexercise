@@ -10,7 +10,7 @@ class PubTest < MiniTest::Test
   def setup
     @pub = Pub.new("Drama Llama Pub")
     @drink = Drink.new("Jack Daniels", 4)
-    @customer = Customer.new("Jake", 50)
+    @customer = Customer.new("Jake", 50, 18)
 
   end
 
@@ -53,7 +53,11 @@ class PubTest < MiniTest::Test
 
   # def test_sell_drink
   #
-  # end
+  # end2
+
+  def test_check_age
+    assert_equal(true, @pub.check_age(@customer))
+  end
 
   def test_sell_drink
     @pub.add_drink_stock(@drink)
@@ -61,5 +65,7 @@ class PubTest < MiniTest::Test
     assert_equal(0, @pub.drink_stock)
     assert_equal(4, @pub.till_amount)
   end
+
+
 
 end
