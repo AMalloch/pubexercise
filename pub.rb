@@ -33,8 +33,6 @@ class Pub
   def check_age(customer)
     if customer.age >= 18
       return true
-    else
-      return false
     end
   end
 
@@ -43,6 +41,14 @@ class Pub
     remove_drink_stock(drink)
     customer.pay_for_drink(drink)
     add_till_amount(drink)
+  end
+
+  def check_drunkenness(customer)
+    if customer.drunkenness >= 10
+      return "Get out ma pub!"
+    else
+      return customer.drunkenness
+    end
   end
 
 
