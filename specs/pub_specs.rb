@@ -25,6 +25,12 @@ class PubTest < MiniTest::Test
     assert_equal(1, @pub.drink_stock)
   end
 
+  def test_remove_drink_stock
+    @pub.add_drink_stock(@drink)
+    @pub.remove_drink_stock(@drink)
+    assert_equal(0, @pub.drink_stock)
+  end
+
 
 
 end

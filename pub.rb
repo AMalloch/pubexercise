@@ -14,5 +14,8 @@ attr_reader :name
     @drinks << drink
   end
 
+  def remove_drink_stock(drink)
+    @drinks.pop
+  end
 
 end
