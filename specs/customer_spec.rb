@@ -9,7 +9,7 @@ class CustomerTest < MiniTest::Test
 
   def setup
     @customer = Customer.new("Jake", 50, 18)
-    @drink = Drink.new("Jack Daniels", 4)
+    @drink = Drink.new("Jack Daniels", 4, 1)
     @pub = Pub.new("Drama Llama Pub")
 
   end
@@ -41,8 +41,7 @@ class CustomerTest < MiniTest::Test
   end
 
   def test_drunk_level
-    @customer.get_drink(@drink)
-    assert_equal(1, @customer.drunk_level)
+    assert_equal(0, @customer.drunk_level)
   end
 
 end

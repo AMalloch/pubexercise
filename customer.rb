@@ -20,4 +20,8 @@ attr_accessor :wallet
   def pay_for_drink(drink)
     @wallet -= (drink.price)
   end
+
+  def drunk_level
+    return @drunkenness
+  end
 end
