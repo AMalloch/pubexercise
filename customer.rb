@@ -1,7 +1,7 @@
 class Customer
 attr_reader :name, :age
 attr_accessor :wallet, :drunkenness
-  def initialize(name, wallet, age, drunkenness)
+  def initialize(name, wallet, age)
     @name = name
     @wallet = wallet
     @stomach = []
@@ -24,5 +24,18 @@ attr_accessor :wallet, :drunkenness
 
   def drunk_level
     return @drunkenness
+  end
+
+  def food_in_belly
+    @stomach.length
+  end
+
+  def get_food(food)
+    @stomach << food
+    @drunkenness += food.level
+  end
+
+  def pay_for_food(food)
+    @wallet -= (food.price)
   end
 end

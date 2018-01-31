@@ -51,5 +51,27 @@ class CustomerTest < MiniTest::Test
     assert_equal(1, @customer.drunk_level)
   end
 
+  def test_customer_food_in_belly__empty
+    assert_equal(0, @customer.food_in_belly)
+  end
+
+  def test_customer_get_food
+    @customer.get_food(@food)
+    assert_equal(1, @customer.food_in_belly)
+  end
+
+  def test_customer_pay_for_food
+    @customer.pay_for_food(@food)
+    assert_equal(45, @customer.wallet)
+  end
+
+  def test_customer_sober_food
+    @customer.get_drink(@drink)
+    @customer.get_drink(@drink)
+    @customer.get_drink(@drink)
+    @customer.get_food(@food)
+    assert_equal(1, @customer.drunkenness)
+  end
+
 
 end
