@@ -60,6 +60,7 @@ class PubTest < MiniTest::Test
   end
 
   def test_sell_drink
+    @pub.check_age(@customer)
     @pub.add_drink_stock(@drink)
     @pub.sell_drink(@customer, @drink)
     assert_equal(0, @pub.drink_stock)

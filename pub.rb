@@ -39,6 +39,7 @@ class Pub
   end
 
   def sell_drink(customer, drink)
+    check_age(customer)
     remove_drink_stock(drink)
     customer.pay_for_drink(drink)
     add_till_amount(drink)
