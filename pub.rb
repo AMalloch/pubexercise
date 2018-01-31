@@ -21,4 +21,8 @@ attr_reader :name
   def till_amount
     return @till
   end
+
+  def add_till_amount(drink)
+    @till += (drink.price)
+  end
 end

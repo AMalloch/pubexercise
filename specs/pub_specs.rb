@@ -35,5 +35,9 @@ class PubTest < MiniTest::Test
     assert_equal(0, @pub.till_amount)
   end
 
+  def test_add_till_amount
+    @pub.add_till_amount(@drink)
+    assert_equal(4, @pub.till_amount)
+  end
 
 end
