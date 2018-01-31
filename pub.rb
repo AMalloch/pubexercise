@@ -6,7 +6,10 @@ attr_reader :name
     @drinks = []
   end
 
+  def drink_stock
+    return @drinks.length
+  end
 
 
-  
+
 end

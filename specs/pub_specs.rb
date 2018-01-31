@@ -15,6 +15,10 @@ class PubTest < MiniTest::Test
     assert_equal("Drama Llama Pub", @pub.name)
   end
 
+  def test_drink_stock
+    assert_equal(0, @pub.drink_stock)
+  end
+
 
 
 end
