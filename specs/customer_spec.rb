@@ -2,11 +2,14 @@ require('minitest/autorun')
 require('minitest/rg')
 
 require_relative('../customer')
+require_relative('../drink')
+require_relative('../pub')
 
 class CustomerTest < MiniTest::Test
 
   def setup
     @customer = Customer.new("Jake", 50)
+    @drink = Drink.new("Jack Daniels", 4)
 
   end
 
@@ -18,6 +21,9 @@ class CustomerTest < MiniTest::Test
     assert_equal(50, @customer.wallet)
   end
 
+  def test_customer_drinks_in_belly__empty
+    assert_equal(0, @customer.drinks_in_belly)
+  end
 
 
 end
