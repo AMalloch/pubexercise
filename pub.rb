@@ -1,5 +1,5 @@
 class Pub
-attr_reader :name
+  attr_reader :name
   def initialize(name)
     @name = name
     @till = 0
@@ -15,7 +15,12 @@ attr_reader :name
   end
 
   def remove_drink_stock(drink)
-    @drinks.pop
+    for alcohol in @drinks
+      if alcohol == drink
+        @drinks.delete(drink)
+      else return "We've no got that pal!"
+      end
+    end
   end
 
   def till_amount
@@ -25,4 +30,11 @@ attr_reader :name
   def add_till_amount(drink)
     @till += (drink.price)
   end
+
+  def sell_drink(customer, drink)
+    remove_drink_stock(drink)
+    customer.pay_for_drink(drink)
+    add_till_amount(drink)
+  end
+
 end
