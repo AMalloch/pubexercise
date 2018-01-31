@@ -18,7 +18,6 @@ class Pub
     for alcohol in @drinks
       if alcohol == drink
         @drinks.delete(drink)
-      else return "We've no got that pal!"
       end
     end
   end
